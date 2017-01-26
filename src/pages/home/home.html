@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{appName}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="outer-content">
+    <ion-item>
+      <ion-label>Lullaby Time</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+    </ion-item>
+
+    <button ion-button icon-left class="center" color="secondary">
+        <ion-icon name="md-stopwatch"></ion-icon>
+        Start
+    </button>
+
+</ion-content>
+
+<style>
+  ion-list:first-child {
+    margin-top: 32px;
+  }
+  ion-list + ion-list {
+    margin-top: 0;
+  }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+</style>
